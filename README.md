@@ -43,5 +43,5 @@ There are two versions. A simple html version and a full standalone html version
 
 ## Play
 
-Open your browser and visit `http://localhost:3000`
+Open your browser and visit `https://ekomateas.github.io/Balckets/balcketsgame-standalone.html`
 
