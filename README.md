@@ -35,7 +35,7 @@ While the score increases, the time you have to decide to which bucket you will 
 
 ## Versions
 
-There are two versions. A simple html version and a single-file standalone self-contained html version.
+There are two versions. A standard html version and a single-file standalone self-contained html version.
 
 ## Prerequisites
 
@@ -43,16 +43,14 @@ There are two versions. A simple html version and a single-file standalone self-
 
 ## Play
 
-Open your browser and visit 
+For the standalone version visit 
 
 [https://ekomateas.github.io/Balckets/balcketsgame-standalone.html](https://ekomateas.github.io/Balckets/balcketsgame-standalone.html) 
 
-for standalone version
-
-or visit 
+For the standard html version visit 
 
 [https://ekomateas.github.io/Balckets/balcketsgame.html](https://ekomateas.github.io/Balckets/balcketsgame.html) 
 
-for simple html version.
+
 
 
