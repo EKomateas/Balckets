@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Balckets Game</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="Balckets is a free online game for those who want to spend their time having fun while training their brain.  You can play Balckets on your computer, on your tablet or on your mobile phone." />
+    <meta name="keywords" content="Game,bain-game,mind-training" />
+    <link rel="icon" href="./images/icons/favicon.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon" />
+    <link rel="stylesheet" href="./css/game.css" />
+</head>
+
+<body>
+    <div class="background blur"></div>
+    <div class="container">
+
+        <div class="scoreboard hidden">
+
+            <div class="line">
+                SCORE: <span class="score"></span> Level: <span class="multiplier"></span>
+                <a class="quit">Quit</a>
+            </div>
+
+        </div>
+
+        <div class="bullets hidden">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+
+        <div class="ball hidden">
+            <div class="number"></div>
+        </div>
+
+        <img class="logo" src="./images/logos/balckets.png">
+
+        <div class="buttons hidden">
+            <div class="button left"></div>
+            <div class="button right"></div>
+        </div>
+
+
+        <div class="buckets hidden">
+            <div class="bucket left"><div class="balls"></div></div>
+            <div class="bucket trash"><div class="balls"></div></div>
+            <div class="bucket right"><div class="balls"></div></div>
+        </div>
+
+        <div class="popup hidden">
+            <div class="gameOver hidden">
+                <img src="./images/gameOver.png">
+            </div>
+            <div class="welcome hidden">
+                <h1>Welcome to balckets!</h1>
+                <h2>Brain game to train your mind</h2>
+                <h3>Have fun!</h3>
+                <img class="play" src="./images/buttons/play.png"><br>
+                <a class="howToPlay">Instructions</a>
+
+            </div>
+        </div>
+
+        <div class="popupTop hidden">
+            <div class="gameOver hidden">
+                <span class="closePopup">X</span>
+                <img src="./images/gameOver.png">
+                <h1 style="text-align: center; font-size: 3rem;">Score</h1>
+                <div class="gameInfo">
+                    <div class="score"></div>
+                </div>
+                
+            </div>
+            <div class="instructions hidden">
+                <span class="closePopup">X</span>
+                <h1>Instructions</h1>
+                <p>
+                    There are 3 buckets, a white one on the left, a white one on the right and a red one on the center.
+                    A ball with a number appears and you must drop the ball on one of these buckets. The purpose of the
+                    game is to keep balanced the left and the right buckets.
+                </p>
+                <h2>Controls</h2>
+                <p>
+                    <ul>
+                        <li>
+                            Click on any bucket to drop the ball in.
+                        </li>
+                        <li>
+                            Press the left button to drop the ball in the left bucket,<br>
+                            Press right button to drop the ball in the right bucket
+                        </li>
+                        <li>
+                            Press keyboard left arrow to drop the ball to left bucket,<br>
+                            Press keyboard right arrow to drop the ball to right bucket,<br>
+                            Press keyboard down arrow to drop the ball to red bucket
+                        </li>
+                    </ul>
+                </p>
+                <h2>Score</h2>
+                <p>
+                    When the sum of the numbers of the balls in the left bucket is equal with the sum of the numbers of the balls
+                    in right bucket, the buckets are balanced, the buckets overturn and empty, and the equal sum of the left and
+                    right bucket, minus the sum of the balls in the red bucket, is multiplied with a score relative multiplier
+                    and the result is added to your score. If there are balls in the red bucket, the sum of the numbers of the
+                    balls is subtracted from the score.
+                </p>
+                <p>
+                    While the score increases, the time you have to decide to which bucket you will drop the ball, decreases. If
+                    the time expires, the ball is dropped on the red bucket. The game is over when you try to drop a ball in an full
+                    bucket.
+                </p>
+                <p style="text-align: right;">
+                    version 25.05.25<br>
+                </p>
+                <p style="text-align: center; font-size: 0.75rem;">
+                    powered by e.komateas<br>
+                    contact <a href="mailto:ekomateas@gmail.com">ekomateas@gmail.com</a><br>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/balckets.js"></script>
+
+    <script>
+        $(function() {
+            balckets.run();
+        });
+    </script>
+</body>
+
+</html>
