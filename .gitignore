@@ -1,0 +1,71 @@
+# Compiled source #
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.obj
+*.pyc
+*.pyo
+*.pyd
+
+# Packages #
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Node.js #
+node_modules/
+npm-debug.log*
+
+# Python #
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Visual Studio #
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mac system files #
+.AppleDouble
+.LSOverride
+
+# VSCode #
+.vscode/
+
+# Backup files #
+*~
+*.bak
+*.tmp
+*.swp
+*.swo
+
+__oldies/
+py/
+*.base64.txt
+.htaccess

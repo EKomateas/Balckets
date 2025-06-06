@@ -1,0 +1,469 @@
+@font-face {
+    font-family: 'Amaranth';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Amaranth Regular'), local('Amaranth-Regular'), url(../fonts/KtkuALODe433f0j1zMnFHdA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Amaranth';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Amaranth Bold'), local('Amaranth-Bold'), url(../fonts/KtkpALODe433f0j1zMF-OMWl42E.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+html { 
+    margin: 0; padding: 0; width: 100vw; min-width: 320px; height: 100%; min-height: 360px;
+    font-size: 1em; font-family: Amaranth, 'Helvetica Neue', Arial, Sans-Serif; 
+    background-color: #FFFFFF; color: #171C2F; 
+}
+
+body { 
+    margin: 0; padding: 0; width: 100%; height: 100%; 
+    font-size: 1rem; 
+    background-color: #FFFFFF;
+} 
+
+.blur {
+    animation: keyframesBlur 3s forwards;
+}
+
+.unblur {
+    animation: keyframesUnblur 3s forwards;
+}
+
+@keyframes keyframesBlur {
+    from { filter: blur(0px); }
+    to { filter: blur(44px); }
+}
+
+@keyframes keyframesUnblur {
+    from { filter: blur(44px); }
+    to { filter: blur(0px); }
+}
+
+.background { 
+    content: "";
+    position: fixed;
+    display: block;
+    top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; 
+    background: url("../images/backgrounds/1.jpg") no-repeat center center fixed; background-size: cover;
+}
+
+.hidden {
+    display: none;
+}
+
+.container { 
+    position: relative; width: 100%; height: 100%; min-height: 360px;
+    min-width: 320px; margin-left: auto; margin-right: auto;
+}
+
+.scoreboard {
+    position: absolute; top: 0; left: 0; right: 0; padding: 0.2rem;
+    text-align: center;  color: #FFFFFF;  background-color: rgba(0,0,0,0.6);
+}
+
+.scoreboard .line {
+    position: relative; padding: 0px 0px 2px 0px;
+}
+
+.scoreboard .score {
+    font-weight: bold; font-size: 120%;
+}
+
+.scoreboard .quit {
+    font-weight: bold; font-size: 90%;
+    position: absolute; right: 1rem;
+    cursor: pointer;
+}
+
+.scoreboard .score .blink { 
+    animation: keyframesScoreBlink 4s ease-out; 
+}
+
+@keyframes keyframesScoreBlink {
+    0% { color: rgba(255, 0, 0, 0.9);  }
+    100% { color: #FFFFFF; }
+}
+
+/* .bullets { } */
+
+.bullets .left { 
+    width: 5vw; height: 5vw; top: 30vw; left: 50vw; position: absolute; z-index: 8001;
+    background: url("../images/bullets/bullet.png") no-repeat; background-size: 100%; 
+    transform: translate(-9.5vw, 0);
+}
+
+.bullets .right { 
+    width: 5vw; height: 5vw; top: 30vw; left: 50vw; position: absolute; z-index: 8001;
+    background: url("../images/bullets/bullet.png") no-repeat; background-size: 100%; 
+    transform: translate(+4.5vw, 0);
+}
+
+.logo {
+    position: absolute; max-width: 70vw; height: auto; top: 2vh; left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.logo.shrink { 
+    transform-origin: -50% 0%; 
+    transition: transform 1000ms linear; 
+    transform: scale(0.5) translateY(400%); }
+
+.buttons { 
+    position: absolute; top: 13vh;
+}
+
+/* .buttons.disabled { } */
+
+.buttons .button { 
+    position: absolute; width: 15vw; height: 15vw; max-width:160px; max-height:160px;
+    text-align: center; border-radius: 50%; 
+    background: url("../images/buttons/off.png") no-repeat; background-size: 100%; 
+    cursor: pointer; 
+}
+
+.buttons .button.disabled {
+    background: url("/images/buttons/on.png") no-repeat; background-size: 100%;  
+}
+
+.buttons .button.left { 
+    left: 10vw; 
+}
+
+.buttons .button.right { 
+    left: 75vw; 
+}
+
+.dropBallToLeftBucket { transform: scale(0.47); animation: keyframesDropBallToLeftBucket 0.6s; }
+.dropBallToTrashBucket { transform: scale(0.47); animation: keyframesDropBallToTrashBucket 0.6s; }
+.dropBallToRightBucket { transform: scale(0.47); animation: keyframesDropBallToRightBucket 0.6s; }
+
+@keyframes keyframesDropBallToLeftBucket {
+     70% { top: 70vh; left: -600px; transform: scale(0.4); } 
+     100% {top: 80vh; left: -600px; opacity: 0; } 
+}
+
+@keyframes keyframesDropBallToTrashBucket { 
+    70% { top: 70vh; transform: scale(0.4); } 
+    100% {top: 80vh; opacity: 0; } 
+}
+
+@keyframes keyframesDropBallToRightBucket { 
+    70% { top: 70vh; left: 600px; transform: scale(0.4); } 
+    100% { top: 80vh; left: 600px; opacity: 0; } 
+}
+
+.ball.shrink10000 { transform-origin: 50% 130%; transition: transform 10000ms linear; transform: scale(0.47); animation: keyframesBlinkBallNum 2800ms 7000ms; }
+.ball.shrink9000 { transform-origin: 50% 130%; transition: transform 9000ms linear; transform: scale(0.47); animation: keyframesBlinkBallNum 2800ms 6000ms; }
+.ball.shrink8000 { transform-origin: 50% 130%; transition: transform 8000ms linear; transform: scale(0.47); animation: keyframesBlinkBallNum 2800ms 5000ms; }
+.ball.shrink7000 { transform-origin: 50% 130%; transition: transform 7000ms linear; transform: scale(0.47); animation: keyframesBlinkBallNum 2800ms 4000ms; }
+.ball.shrink6000 { transform-origin: 50% 130%; transition: transform 6000ms linear; transform: scale(0.47); animation: keyframesBlinkBallNum 2800ms 3000ms; }
+.ball.shrink5000 { transform-origin: 50% 130%; transition: transform 5000ms linear; transform: scale(0.47); animation: keyframesBlinkBallNum 2800ms 2000ms; }
+.ball.shrink4000 { transform-origin: 50% 130%; transition: transform 4000ms linear; transform: scale(0.47); animation: keyframesBlinkBallNum 2800ms 1000ms; }
+.ball.shrink3000 { transform-origin: 50% 130%; transition: transform 3000ms linear; transform: scale(0.47); animation: keyframesBlinkBallNum 2800ms 0ms; }
+
+@keyframes keyframesBlinkBallNum {
+    20% { color: #AA0000; }
+    40% { color: #FFFFFF; }
+    60% { color: #AA0000; }
+    80% { color: #FFFFFF; }
+    100% { color: #AA0000; }
+}
+
+.emptyLeftBucket {
+    animation: keyframesEmptyLeftBucket 1s ease-out;
+}
+
+.emptyTrashBucket {
+    animation: keyframesEmptyTrashBucket 1s ease-out;
+}
+
+.emptyRightBucket {
+    animation: keyframesEmptyRightBucket 1s ease-out;
+}
+
+@keyframes keyframesEmptyLeftBucket {
+    10% { transform: scale(0.5, 0.5);}
+    50% { transform: scale(0.5, 0.5) rotate(-140deg);}
+    90% { transform: scale(0.6, 0.6); }
+    100% { transform: scale(1, 1) rotate(0deg);}
+}
+
+@keyframes keyframesEmptyTrashBucket {
+    10% { transform: scale(0.7, 0.7);}
+    50% { transform: scale(0.7, 0.7) rotateX(-140deg);}
+    90% { transform: scale(0.8, 0.8); }
+    100% { transform: scale(1, 1) rotateX(0deg);}
+}
+
+@keyframes keyframesEmptyRightBucket {
+    10% { transform: scale(0.5, 0.5);}
+    50% { transform: scale(0.5, 0.5) rotate(140deg);}
+    90% { transform: scale(0.6, 0.6); }
+    100% { transform: scale(1, 1) rotate(0deg);}
+}
+
+.removeBucketBall {
+    animation: keyframesRemoveBucketBall 0.4s linear 0.3s forwards;
+}
+
+@keyframes keyframesRemoveBucketBall {
+    from { opacity: 1; }
+    to { opacity: 0; transform: translate(0, -100%); }
+}
+
+.popup {
+    position: absolute; 
+    left: 0; right: 0; 
+    top: 44%; width: 88%; height: auto; max-height: 70vh;
+    margin-left: auto; 
+    margin-right: auto; 
+    transform: translateY(-50%);
+    overflow: auto;
+}
+
+.popup h1, .popupTop h1 {
+    color: #FFFFFF;
+    font-size: 1.88rem;
+    margin: 0;
+    text-shadow: 1px 1px 4px #000000;
+    text-align: center;
+}
+
+.popup h2, .popupTop h2 {
+    color: #AA0000;
+    font-size: 1.3rem;
+    margin: 0;
+    text-shadow: 1px 1px 1px #FFFFFF;
+    text-align: center;
+}
+
+.popup h3, .popupTop h3 {
+    color: #000000;
+    font-size: 1.2rem;
+    margin: 0;
+    text-shadow: 1px 1px 1px #FFFFFF;
+    text-align: center;
+}
+
+.popup .welcome {
+    cursor: pointer;
+    max-width: 90vw;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+.popup .welcome .play {
+    width: 30%;
+    max-width: 200px;
+}
+
+.popup .welcome .howToPlay {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.popupTop {
+    position: absolute; 
+    left: 0; right: 0; top: 10px;
+    width: 80%; height: auto;
+    max-height: 86vh; max-width: 800px;
+    margin-left: auto; 
+    margin-right: auto; 
+    background-color: rgba(255, 255, 255, 0.94);
+    border: 4px solid #AA0000;
+    border-radius: 10px;
+    padding: 15px;
+    overflow: auto;
+}
+
+.popupTop h1, .popupTop h2, .popupTop h3 {
+    text-align: left;
+}
+
+.popup div, .popupTop div {
+    position: relative;
+}
+
+.popupTop .gameOver {
+    text-align: center;
+}
+
+.popupTop .gameOver img {
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+}
+
+.popupTop .gameOver .gameInfo {
+    text-align: center;
+}
+
+.popupTop .gameOver .gameInfo h1 {
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+.popupTop .gameOver .gameInfo .score {
+    color: #AA0000;
+    font-size: 4rem;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+.closePopup {
+    font-weight: 700;
+    color: #FFF;
+    background-color: #A00;
+    position: absolute;
+    right: 0rem;
+    top: 0rem;
+    border: 0;
+    border-radius: 50%;
+    padding: .1rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    line-height: 1.1rem;
+    padding: 0.5rem;
+}
+
+.ball { 
+    position: absolute; 
+    z-index: 8000; 
+    top: 14vw; left:0; right:0; bottom:0; 
+    text-align: center; 
+    width: 20vw; height: 20vw; 
+    margin: 0 auto 0 auto; 
+    border-radius: 50%; 
+    background: url("../images/balls/normal.png") no-repeat; background-size: 100%; 
+    color: rgba(255,255,255, 0.9); vertical-align: middle;
+}
+
+.ball .number { 
+    font-size: 12vw; font-weight: bold; margin-top: 2.6vw; 
+}
+
+.buckets { 
+    position: absolute; 
+    bottom: 2px; left: 0px; right: 0px; width: 98%; 
+    margin: 0 auto 0 auto; 
+    display: table;
+}
+
+.buckets .bucket.left { 
+    background-image: url("../images/buckets/left.png"); 
+}
+
+.buckets .bucket.trash { 
+    background-image: url("../images/buckets/trash.png"); 
+}
+
+.buckets .bucket.right { 
+    background-image: url("../images/buckets/right.png"); 
+}
+
+.buckets .bucket { 
+    background-repeat: no-repeat; background-size: 100% 100%; background-position: bottom; cursor: pointer; 
+    width: 30%; height: 42vw; display: table-cell; 
+    vertical-align: bottom; margin: auto; padding: 0px 5px 5px 5px; 
+}
+
+.buckets .balls { 
+    display: flex; flex-wrap: wrap-reverse; overflow: hidden; 
+}
+
+.buckets .bucketBall { 
+    text-align: center; width: 9.8vw; height: 9.8vw; border-radius: 50%;  
+    color: rgba(0, 0, 0, 0.8); margin: 0 0 0 0; opacity: 1; 
+}
+
+.buckets .bucket.left .balls .bucketBall, .buckets .bucket.right .balls .bucketBall { 
+    background: url("../images/balls/inBucket.png") no-repeat; background-size: 100%;
+}
+
+.buckets .bucket.trash .balls .bucketBall { 
+    background: url("../images/balls/inTrash.png") no-repeat; background-size: 100%;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.buckets .bucketBall .number { 
+    font-size: 5vw; font-weight: bold; margin-top: 1.5vw; 
+}
+
+@media screen and (min-width:820px) {
+    
+    .bullets .left { 
+        width: 40px; height: 40px; top: 250px;
+        transform: translate(-75px, 0); 
+    } 
+    
+    .bullets .right { 
+        width: 40px; height: 40px; top: 250px;
+        transform: translate(35px, 0); 
+    } 
+    
+    .ball { 
+        top: 116px; width: 160px; height: 160px;
+    }
+
+    .ball .number { 
+        font-size: 96px; margin-top: 19px; 
+    }
+
+    .buckets { 
+        width: 800px;
+    }
+    
+    .buckets .bucket { 
+        padding: 0px 10px 10px 10px; height: 340px; 
+    }
+
+    .buckets .bucket .balls .bucketBall { 
+        width: 80px; height: 80px; 
+    }
+
+    .buckets .bucket .balls .bucketBall .number { 
+        font-size: 41px; margin-top: 12px; 
+    } 
+}
+
+@media screen and (max-width: 800px) {
+
+    @keyframes keyframesDropBallToLeftBucket { 
+        70% { top: 70vh; left: -60vw; transform: scale(0.4); } 
+        100% {top: 80vh; left: -60vw; opacity: 0; } 
+    }
+
+    @keyframes keyframesDropBallToRightBucket { 
+        70% { top: 70vh; left: 60vw; transform: scale(0.4); } 
+        100% { top: 80vh; left: 60vw; opacity: 0; } 
+    }
+}
+
+body::after{
+    position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+    content: url("../images/balls/inTrash.png") 
+             url("../images/balls/inBucket.png") 
+             url("../images/buckets/right.png")
+             url("../images/buckets/trash.png")
+             url("../images/buckets/left.png")
+             url("../images/balls/normal.png")
+             url("/images/buttons/on.png")
+             url("../images/buttons/off.png")
+             url("../images/bullets/bullet.png")
+             url("../images/backgrounds/1.jpg")
+             url("../images/backgrounds/2.jpg")
+             url("../images/backgrounds/3.jpg")
+             url("../images/backgrounds/4.jpg")
+             url("../images/backgrounds/5.jpg")
+             url("../images/backgrounds/6.jpg")
+             url("../images/backgrounds/7.jpg")
+             url("../images/backgrounds/8.jpg")
+             url("../images/backgrounds/9.jpg")
+             url("../images/backgrounds/10.jpg");             
+}
