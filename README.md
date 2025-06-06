@@ -8,15 +8,11 @@
 
 ## What is Balckets
 
-<<<<<<< HEAD
 Balckets is a brain training game. 
 Balckets is a free online game for those who want to spend their time having fun while training their brain.
 You can play Balckets on your computer, on your tablet or on your mobile phone.
 There is 2 versions available. The standalone version and the default online version.
 You can [download the standalone html file](https://ekomateas.github.io/Balckets/balcketsgame-standalone.html) and play the game offline.
-=======
-Balckets is a brain training game.
->>>>>>> c53223b702f68f3165fc54a899e79513b75e7ff6
 
 ## Instructions
 
