@@ -1,7 +1,7 @@
 
-<div align="right">
+<div align="right" style="font-size: small">
 
-[Δείτε το README στα Ελληνικά](README-el.md)
+[Δείτε το README στα Ελληνικά](https://ekomateas.github.io/Balckets/README-el.html)
 
 </div>
 
