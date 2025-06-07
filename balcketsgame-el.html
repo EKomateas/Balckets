@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Balckets Game</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="Το Balckets είναι ένα δωρεάν online παιχνίδι για εκείνους που θέλουν να διασκεδάσουν, γυμνάζοντας ταυτόχρονα το μυαλό τους. Μπορείτε να παίξετε το παιχνίδι στον υπολογιστή, στο tablet ή στο κινητό σας, ακόμα και αν δεν υπάρχει σύνδεση στο internet." />
+    <meta name="keywords" content="Παιχνίδι,εκπαιδευτικό παιχνίδι,παιχνίδι εκγύμνασης εγκεφάλου" />
+    <link rel="icon" href="./images/icons/favicon.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon" />
+    <link rel="stylesheet" href="./css/game.css" />
+</head>
+
+<body>
+    <div class="background blur"></div>
+    <div class="container">
+
+        <div class="scoreboard hidden">
+
+            <div class="line">
+                Βαθμοί: <span class="score"></span> Επίπεδο: <span class="multiplier"></span>
+                <a class="quit">Έξοδος</a>
+            </div>
+
+        </div>
+
+        <div class="bullets hidden">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+
+        <div class="ball hidden">
+            <div class="number"></div>
+        </div>
+
+        <img class="logo" src="./images/logos/balckets.png">
+
+        <div class="buttons hidden">
+            <div class="button left"></div>
+            <div class="button right"></div>
+        </div>
+
+
+        <div class="buckets hidden">
+            <div class="bucket left"><div class="balls"></div></div>
+            <div class="bucket trash"><div class="balls"></div></div>
+            <div class="bucket right"><div class="balls"></div></div>
+        </div>
+
+        <div class="popup hidden">
+            <div class="gameOver hidden">
+                <img src="./images/gameOver.png">
+            </div>
+            <div class="welcome hidden">
+                <h1>Καλώς ήρθατε στο balckets!</h1>
+                <h2>Ένα παιχνίδι εκγύμνασης του εγκεφάλου σας</h2>
+                <h3>Καλή διασκέδαση!</h3>
+                <img class="play" src="./images/buttons/play.png"><br>
+                <a class="howToPlay">Οδηγίες</a>
+
+            </div>
+        </div>
+
+        <div class="popupTop hidden">
+            <div class="gameOver hidden">
+                <span class="closePopup">X</span>
+                <img src="./images/gameOver.png">
+                <h1 style="text-align: center; font-size: 3rem;">Βαθμοί</h1>
+                <div class="gameInfo">
+                    <div class="score"></div>
+                </div>
+                
+            </div>
+            <div class="instructions hidden">
+                <span class="closePopup">X</span>
+                <h1>Οδηγίες</h1>
+                <p>
+                    Υπάρχουν 3 κάδοι, ένας λευκός αριστερά, ένας λευκός δεξιά και ένας κόκκινος στο κέντρο.
+                    Μία μπάλα με έναν αριθμό εμφανίζεται και πρέπει να την ρίξετε σε έναν από αυτούς τους κάδους.
+                    Ο σκοπός του παιχνιδιού είναι να κρατήσετε ισορροπημένους τον αριστερό και τον δεξιό κάδο.
+                </p>
+                <h2>Έλεγχος</h2>
+                <p>
+                    <ul>
+                        <li>Κλικ σε οποιονδήποτε κάδο για να ρίξεις την μπάλα σε αυτόν</li>
+                        <li>Πατήστε το αριστερό κουμπί για να ρίξετε την μπάλα στον αριστερό κάδο</li>
+                        <li>Πατήστε το δεξί κουμπί για να ρίξετε την μπάλα στον δεξιό κάδο</li>
+                        <li>Πατήστε το κάτω κουμπί για να ρίξετε την μπάλα στον κόκκινο κάδο</li>
+                        <li>Πατήστε το αριστερό βέλος στο πληκτρολόγιο για να ρίξετε την μπάλα στον αριστερό κάδο</li>
+                        <li>Πατήστε το δεξί βέλος στο πληκτρολόγιο για να ρίξετε την μπάλα στον δεξιό κάδο</li>
+                        <li>Πατήστε το κάτω βέλος στο πληκτρολόγιο για να ρίξετε την μπάλα στον κόκκινο κάδο</li>
+                    </ul>
+                </p>
+                <h2>Βαθμολογία</h2>
+                <p>
+                    Όταν το άθροισμα των αριθμών των μπαλών στον αριστερό κάδο είναι ίσο με το άθροισμα των αριθμών των μπαλών
+                    στον δεξιό κάδο, οι κάδοι ισορροπούν, ανατρέπονται και αδειάζουν, και το ίσο άθροισμα του αριστερού και του δεξιού κάδου 
+                    μείον το άθροισμα των μπαλών στον κόκκινο κάδο, πολλαπλασιάζεται με έναν πολλαπλασιαστή
+                    σχετικό με το σκορ και το αποτέλεσμα προστίθεται στο σκορ σας. Αν υπάρχουν μπάλες στον κόκκινο κάδο, 
+                    το άθροισμα των αριθμών των μπαλών αφαιρείται από το σκορ.  
+                </p>
+                <p>
+                    Όσο το σκορ αυξάνεται, ο χρόνος που έχετε για να αποφασίσετε σε ποιον κάδο θα ρίξετε την μπάλα, μειώνεται.
+                    Αν ο χρόνος λήξει, η μπάλα ρίχνεται στον κόκκινο κάδο. Το παιχνίδι τελειώνει όταν ρίξετε μία μπάλα σε έναν γεμάτο κάδο.
+                </p>
+                <p style="text-align: right;">
+                    version 25.05.25<br>
+                </p>
+                <p style="text-align: center; font-size: 0.75rem;">
+                    powered by e.komateas<br>
+                    contact <a href="mailto:ekomateas@gmail.com">ekomateas@gmail.com</a><br>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/balckets.js"></script>
+
+    <script>
+        $(function() {
+            balckets.run();
+        });
+    </script>
+</body>
+
+</html>
