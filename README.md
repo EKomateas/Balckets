@@ -34,9 +34,10 @@ Balckets is great for students who want to improve:
 - Strategic planning – players must anticipate their moves carefully.
 
 ## Why try it
-• 	Easy to play & fun for all ages.
-• 	Ideal for schools & educational activities.
-• 	Helps develop logical thinking & problem-solving skills.
+
+-	Easy to play & fun for all ages.
+-	Ideal for schools & educational activities.
+-	Helps develop logical thinking & problem-solving skills.
 
 
 ## Controls
