@@ -1,85 +1,86 @@
-
 <div align="right" style="font-size: small">
-
-[Δείτε το README στα Ελληνικά](https://ekomateas.github.io/Balckets/README-el.html)
-
+  [Δείτε το README στα Ελληνικά](https://ekomateas.github.io/Balckets/README-el.html)
 </div>
 
 ![Balckets](images/logos/balckets-fb-cover.jpg)
 
-## What is Balckets
+# Balckets — Brain Training Game 🧠
 
-Balckets is a brain training game. 
-Balckets is a free online game for those who want to spend their time having fun while training their brain.
-Balckets is an innovative educational game that enhances logical thinking, math skills, and quick decision-making.
-You can play Balckets on your computer, on your tablet or on your mobile phone.
-There is 2 versions available. The standalone version and the default online version.
-You can [download the standalone html file](https://ekomateas.github.io/Balckets/balcketsgame-standalone.html) and play the game offline.
+**Balckets** is a free, browser-based brain training game that challenges your logic, math skills, and decision-making under pressure.  
+Play it on your computer, tablet, or mobile device — no installation needed.
 
-##  How to play
+👉 **[Play Online Now](https://ekomateas.github.io/Balckets/balcketsgame.html)**  
+📦 **[Download Standalone Version](https://ekomateas.github.io/Balckets/balcketsgame-standalone.html)**
 
--	There are three buckets, a white one on the left, a white one on the right, and a red one in the center.
--	A ball with a number appears, and the player must decide which bucket to drop it into.
--	Goal is to keep the left and right buckets balanced!
--	When the sum of the numbers in the left and right buckets is equal, they empty, and the player earns points based on a special score multiplier.
--	If a ball falls into the red bucket, its value is subtracted from the score.
--	As the score increases, decision time decreases, making the game more challenging!
--	Game is over when a player drops a ball into a full bucket.
+---
 
-## Educational Benefits
+## 🎯 How to Play
 
-Balckets is great for students who want to improve:
-- Mathematical reasoning – learning sum concepts and balance in a fun way.
-- Decision-making under pressure – fast-paced challenges train quick thinking.
-- Strategic planning – players must anticipate their moves carefully.
+- You have three buckets: left (white), right (white), and center (red).
+- A ball with a number appears — choose a bucket to drop it into.
+- Your goal is to **balance the left and right buckets**.
+- When their sums match, they empty and you score points.
+- Balls in the red bucket subtract from your score.
+- As your score increases, your decision time decreases.
+- The game ends if you drop a ball into a full bucket.
 
-## Why try it
+---
 
--	Easy to play & fun for all ages.
--	Ideal for schools & educational activities.
--	Helps develop logical thinking & problem-solving skills.
+## 🧠 Educational Benefits
 
+Balckets is ideal for students and educators who want to improve:
 
-## Controls
+- **Mathematical reasoning** — understanding sums and balance through gameplay
+- **Decision-making under pressure** — fast-paced choices with consequences
+- **Strategic planning** — anticipating outcomes and managing risk
 
-- Click on any bucket to drop the ball in.
-- Press the left button to drop the ball in the left bucket,
-- Press right button to drop the ball in the right bucket
-- Press keyboard left arrow to drop the ball to left bucket,
-- Press keyboard right arrow to drop the ball to right bucket,
-- Press keyboard down arrow to drop the ball to red bucket
+---
 
-## Score
+## 🎮 Controls
 
-When the sum of the numbers of the balls in the left bucket is equal with the sum of the numbers of the balls in right bucket, the buckets are balanced, the buckets overturn and empty, and the equal sum of the left and right bucket, minus the sum of the balls in the red bucket, is multiplied with a score relative multiplier and the result is added to your score. If there are balls in the red bucket, the sum of the numbers of the balls is subtracted from the score.
+- **Mouse**: Click on a bucket
+- **Keyboard**:
+  - Left Arrow → Left bucket
+  - Right Arrow → Right bucket
+  - Down Arrow → Red bucket
+  - Left/Right mouse buttons also supported
 
-While the score increases, the time you have to decide to which bucket you will drop the ball, decreases. If the time expires, the ball is dropped on the red bucket. The game is over when you try to drop a ball in an full bucket.
+---
 
- <p align="center">
-  <img src="screenshots/balckets-screenshot-1.jpg" />
+## 🧮 Scoring System
+
+- When left and right buckets are balanced, they empty.
+- Your score increases by:  
+  *(sum of left/right buckets − red bucket sum) × multiplier*
+- Red bucket balls always subtract from your score.
+- As score increases, time to decide decreases.
+- If time runs out, the ball drops into the red bucket.
+- Game ends if you try to drop into a full bucket.
+
+<p align="center">
+  <img src="screenshots/balckets-screenshot-1.jpg" alt="Balckets Screenshot" />
 </p>
 
-## Versions
+---
 
-There are two versions. A standard html version and a single-file standalone self-contained html version.
+## 📦 Versions
 
-## Prerequisites
+- `balcketsgame.html` — standard version (loads assets separately)
+- `balcketsgame-standalone.html` — single-file version (self-contained)
 
-- A javascript enabled web browser
+---
 
-## Play
+## ✅ Requirements
 
-For the standalone version visit 
+- Any modern browser with JavaScript enabled
 
-[https://ekomateas.github.io/Balckets/balcketsgame-standalone.html](https://ekomateas.github.io/Balckets/balcketsgame-standalone.html) 
+---
 
-For the standard html version visit 
+## 📬 Contact
 
-[https://ekomateas.github.io/Balckets/balcketsgame.html](https://ekomateas.github.io/Balckets/balcketsgame.html) 
+For questions, feedback, or educational collaborations:  
+**📧 contact@ekomateas.com**
 
-## Contact
+---
 
-Contact me at ekomateas@gmail.com for more information or educational collaborations!
-
-
-
+MIT License © Euthymios Komateas
